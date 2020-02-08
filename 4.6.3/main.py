@@ -14,7 +14,7 @@ def main():
     lda = LinearDiscriminantAnalysis()
     lda_model = lda.fit(x_train, y_train)
 
-    # Priors - probability of marget going Up and Down
+    # Priors - probability of market going Up or Down
     print(lda_model.priors_)
     print()
 
@@ -22,9 +22,11 @@ def main():
     print(lda_model.means_)
     print()
 
-    # Coefficients. For some reason different from r, but predictions are identical
+    # Coefficients for linear combination of the likelihood..? For some reason different from r, but predictions are
+    # identical
     print(lda_model.coef_)
 
+    # Predict probabilities that x belongs to one or the other class
     y_predicted = lda_model.predict_proba(x_test)
     print(y_predicted)
 
