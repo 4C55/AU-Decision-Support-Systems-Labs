@@ -14,3 +14,9 @@ def load_smarket_dataset():
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, 'Smarket.csv')
     return pd.read_csv(filename, usecols=range(1, 10))
+
+
+def load_auto_dataset():
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, 'dataset-38913.csv')
+    return pd.read_csv(filename, usecols=range(0, 8))
