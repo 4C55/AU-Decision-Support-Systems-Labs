@@ -1,7 +1,6 @@
 import Data
-import numpy as np
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.metrics import confusion_matrix, classification_report
+
 
 def main():
     # Prepare date
